@@ -1,0 +1,25 @@
+{
+  "name": "tab-switcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
+  },
+  "dependencies": {
+    "lodash": "*",
+    "core-js": "*",
+    "regenerator-runtime": "*"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "*",
+    "@testing-library/jest-dom": "*",
+    "@testing-library/user-event": "*"
+  },
+  "author": "",
+  "license": "ISC"
+}
