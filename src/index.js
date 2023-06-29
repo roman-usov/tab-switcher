@@ -1,5 +1,5 @@
-import 'core-js/stable/index.js';
-import 'regenerator-runtime/runtime.js';
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 
 import app from './application.js';
 

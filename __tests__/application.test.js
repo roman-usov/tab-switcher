@@ -20,7 +20,7 @@ test('user tabs', async () => {
   expect(userSettingsTab1).not.toHaveClass('active');
   expect(userSettingsContentTab1).not.toHaveClass('active');
 
-  await userEvent.click(userSettingsTab1);
+  await userEvent.default.click(userSettingsTab1);
   const userHomeTab2 = screen.getByRole('tab', { name: 'User home' });
   const userSettingsTab2 = screen.getByRole('tab', { name: 'User settings' });
   expect(userHomeTab2).not.toHaveClass('active');
@@ -38,7 +38,7 @@ test('app tabs', async () => {
   expect(appSettingsTab1).not.toHaveClass('active');
   expect(appSettingsContentTab1).not.toHaveClass('active');
 
-  await userEvent.click(appSettingsTab1);
+  await userEvent.default.click(appSettingsTab1);
   const appSettingsTab2 = screen.getByRole('tab', { name: 'Messages settings' });
   const appSettingsContentTab2 = screen.getByText('Messages settings tab');
   expect(appSettingsTab2).toHaveClass('active');
@@ -56,7 +56,7 @@ test('user tabs after app', async () => {
   expect(userSettingsTab1).toHaveClass('active');
   expect(userSettingsContentTab1).toHaveClass('active');
 
-  await userEvent.click(userSettingsTab1);
+  await userEvent.default.click(userSettingsTab1);
   const userSettingsTab2 = screen.getByRole('tab', { name: 'User settings' });
   const userSettingsContentTab2 = screen.getByText('User settings tab');
   expect(userSettingsTab2).toHaveClass('active');
@@ -67,7 +67,7 @@ test('user tabs after app', async () => {
   expect(userProfileTab1).not.toHaveClass('active');
   expect(userProfileContentTab1).not.toHaveClass('active');
 
-  await userEvent.click(userProfileTab1);
+  await userEvent.default.click(userProfileTab1);
   const userProfileTab2 = screen.getByRole('tab', { name: 'User profile' });
   const userProfileContentTab2 = screen.getByText('User profile tab');
   expect(userProfileTab2).toHaveClass('active');
@@ -86,7 +86,7 @@ test('app tabs after user', async () => {
   expect(appSettingsContentTab1).toHaveClass('active');
 
   const appMessagesTab2 = screen.getByRole('tab', { name: 'Messages' });
-  await userEvent.click(appMessagesTab2);
+  await userEvent.default.click(appMessagesTab2);
   const appSettingsTab2 = screen.getByRole('tab', { name: 'Messages settings' });
   const appSettingsContentTab2 = screen.getByText('Messages settings tab');
   expect(appSettingsTab2).not.toHaveClass('active');
